@@ -1,0 +1,174 @@
+/* Custom CSS for Object Detection Platform */
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #6b7280;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --light: #f9fafb;
+  --dark: #1f2937;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Custom Components */
+.tech-gradient {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.tech-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Button Animations */
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.tooltip:hover:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+  margin-bottom: -5px;
+  z-index: 10;
+}
+
+/* Dark mode components */
+.dark-mode {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.dark-mode .card {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+.dark-mode .text-gray-800 {
+  color: #f9fafb;
+}
+
+.dark-mode .text-gray-700 {
+  color: #e5e7eb;
+}
+
+.dark-mode .text-gray-600 {
+  color: #d1d5db;
+}
+
+.dark-mode .border-gray-200 {
+  border-color: #4b5563;
+}
+
+/* Languages selector styles */
+.lang-flag {
+  width: 18px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+/* Custom responsive breakpoints */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Improved focus styles for accessibility */
+:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Animation for success checkmark */
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark 0.5s ease-in-out forwards;
+}
+
+/* Polished scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+} 
